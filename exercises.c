@@ -33,7 +33,7 @@ void reverseArray(int arr[], int size)
   
   for(size_t i = 0; i < size; i++)
     {
-      for(size_t k = size - 2; k > i; k--)
+      for(size_t k = size - 1; k > i; k--)
         {
           aux = arr[i];
           arr[i] = arr[k];
