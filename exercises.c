@@ -51,11 +51,10 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
   int cont = 0;
   for(size_t i = 0; i < size; i++)
     {
-      if(arr[i] % 2 != 0)
+      if(arr[i] % 2 == 0)
       {
-        arr[i] = 0;
-        
-      } else cont++;
+        cont++;
+      } 
     }
   
   int *newArr = malloc(sizeof(int) * cont);
@@ -64,12 +63,12 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
   
   for(size_t i = 0; i < size; i++)
     {
-      if(arr[i] != 0)
+      if(arr[i] % 2 == 0)
       {
         newArr[conta] = arr[i];
       }
     }
-  
+  *newSize = cont;
   return newArr; 
 }
 
