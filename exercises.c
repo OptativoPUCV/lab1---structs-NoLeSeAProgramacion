@@ -31,14 +31,11 @@ void reverseArray(int arr[], int size)
 {
   int aux = 0;
   
-  for(size_t i = 0; i < size - 1; i++)
+  for(size_t i = 0; i < size/2 ; i++)
     {
-      for(size_t k = size - 1; k > i; k--)
-        {
-          aux = arr[i];
-          arr[i] = arr[k];
-          arr[k] = aux;
-        }  
+        aux = arr[i];
+        arr[i] = arr[size - i - 1];
+        arr[size - i - 1] = aux;
     }  
 }
 
@@ -48,7 +45,30 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
+int *filterEvenNumbers(int arr[], int size, int *newSize)
+{ 
+  for(size_t i = 0; i < size; i++)
+    {
+      if(arr[i] % 2 != 0)
+      {
+        arr[i] = 0;
+      }
+    }
+  
+  int *newArr = malloc(sizeof(int) * size);
+  
+  int cont = 0;
+  
+  for(size_t i = 0; i < size; i++)
+    {
+      if(arr[i] != 0)
+      {
+        newArr[cont] = arr[i];
+      }
+    }
+  
+  return NULL; 
+}
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
