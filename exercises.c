@@ -57,10 +57,8 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
       } 
     }
   
-  int *newArr = malloc(sizeof(int) * cont);
-  
-  
-  
+  int *newArr = malloc(sizeof(int) * cont); //arreglo dinamico creado de tamaño contador
+  *newSize = cont;
   for(size_t i = 0; i < size; i++)
     {
       if(arr[i] % 2 == 0)
@@ -68,7 +66,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
         newArr[i] = arr[i];
       }
     }
-  *newSize = cont;
+  
   return newArr; 
 }
 
