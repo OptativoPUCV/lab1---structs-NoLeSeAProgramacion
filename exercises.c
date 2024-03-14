@@ -80,27 +80,14 @@ arreglos en un tercer arreglo también ordenado de menor a mayor.
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[])
 {
-  int i = 0; // para recorrer el arr1
-  int j = 0; // para recorrer el arr2
-  int k = 0; // para recorrer el result[]
-  while(i < size1 && j < size2)
-    {
-      if(arr1[i] < arr2[j])
-      {
-        result[k] = arr1[i];
-        i++;
-        k++;
-      }
-      if(arr1[i] > arr2[j])
-      {
-        result[k] = arr2[j];
-        j++;
-        k++;
-      }
-      
-    }
-  result = realloc(void *ptr, size_t size)
-  return result;
+  int resultSize = size1 + size2;
+  result = malloc(sizeof(int) * resultSize);
+
+
+  
+
+  
+  
 }
 
 /*
