@@ -83,7 +83,6 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
   int i = 0; // para recorrer el arr1
   int j = 0; // para recorrer el arr2
   int k = 0; // para recorrer el result[]
-
   while(i < size1 && j < size2)
     {
       if(arr1[i] < arr2[j])
@@ -98,8 +97,9 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
         j++;
         k++;
       }
+      
     }
-  
+  result = realloc(void *ptr, size_t size)
   return result;
 }
 
@@ -109,7 +109,12 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) { return -2; }
+int checkSorted(int arr[], int size)
+{
+ 
+  
+
+}
 
 /*
 Ejercicio 6: Información de una Biblioteca
@@ -119,19 +124,28 @@ información utilizando estructuras anidadas en C. Escribe la función para
 inicializar la información de un libro.
 */
 
-typedef struct {
+typedef struct
+{
   char nombre[50];
   int anioNacimiento;
 } Autor;
 
-typedef struct {
+typedef struct
+{
   char titulo[100];
   Autor autor;
   int anioPublicacion;
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
-                      int anioNacimiento, int anioPublicacion) {}
+                      int anioNacimiento, int anioPublicacion)
+{
+
+
+
+
+  
+}
 
 /*
 Ejercicio 7: Lista enlazada de números
@@ -144,7 +158,8 @@ lista enlazada.
 Recuerda reservar memoria dinámica para cada nodo usando malloc.
   */
 
-typedef struct nodo {
+typedef struct nodo
+{
   int numero;
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;

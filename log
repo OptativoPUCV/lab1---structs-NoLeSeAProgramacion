@@ -303,3 +303,33 @@ exercises.c:80:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 65caa81
+Thu 14 Mar 2024 07:43:41 PM UTC: 
+ exercises.c | 28 ++++++++++++++++++++++------
+ 1 file changed, 22 insertions(+), 6 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:102:20: error: expected expression before ‘void’
+  102 |   result = realloc(void *ptr, size_t size)
+      |                    ^~~~
+exercises.c:102:12: error: too few arguments to function ‘realloc’
+  102 |   result = realloc(void *ptr, size_t size)
+      |            ^~~~~~~
+In file included from exercises.c:4,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:14: note: declared here
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |              ^~~~~~~
+In file included from test.c:1:
+exercises.c:102:43: error: expected ‘;’ before ‘return’
+  102 |   result = realloc(void *ptr, size_t size)
+      |                                           ^
+      |                                           ;
+  103 |   return result;
+      |   ~~~~~~                                   
+exercises.c: In function ‘checkSorted’:
+exercises.c:117:1: error: control reaches end of non-void function [-Werror=return-type]
+  117 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3d59cbd
