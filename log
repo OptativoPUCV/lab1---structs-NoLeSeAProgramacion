@@ -103,3 +103,9 @@ exercises.c:62:7: error: unused variable ‘conta’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 fafa9c0
+Thu 14 Mar 2024 06:56:45 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 20/70
+a1df562
