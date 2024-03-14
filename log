@@ -261,3 +261,17 @@ exercises.c:80:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 48ad962
+Thu 14 Mar 2024 07:14:58 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:114:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  114 |   return result;
+      |          ^~~~~~
+exercises.c:80:6: note: declared here
+   80 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
+      |      ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2b0730f
