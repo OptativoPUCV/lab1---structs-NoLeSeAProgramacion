@@ -59,11 +59,13 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
   
   int *newArr = malloc(sizeof(int) * cont); //arreglo dinamico creado de tamaño contador
   *newSize = cont;
+  int j = 0;
   for(size_t i = 0; i < size; i++)
     {
       if(arr[i] % 2 == 0)
       {
-        newArr[i] = arr[i];
+        newArr[j] = arr[i];
+        j++;
       }
     }
   
