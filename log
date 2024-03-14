@@ -221,3 +221,43 @@ exercises.c:80:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 6fab758
+Thu 14 Mar 2024 07:14:14 PM UTC: 
+ exercises.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+Thu 14 Mar 2024 07:14:23 PM UTC: 
+ exercises.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:89:14: error: ‘arr’ undeclared (first use in this function); did you mean ‘arr2’?
+   89 |           if(arr[i] < arr2[j])
+      |              ^~~
+      |              arr2
+exercises.c:89:14: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:114:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  114 |   return result;
+      |          ^~~~~~
+exercises.c:80:6: note: declared here
+   80 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
+      |      ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+Thu 14 Mar 2024 07:14:29 PM UTC: 
+ exercises.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:89:14: error: ‘arr’ undeclared (first use in this function); did you mean ‘arr2’?
+   89 |           if(arr[i] < arr2[j])
+      |              ^~~
+      |              arr2
+exercises.c:89:14: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:114:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  114 |   return result;
+      |          ^~~~~~
+exercises.c:80:6: note: declared here
+   80 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
+      |      ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+48ad962
