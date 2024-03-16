@@ -127,12 +127,11 @@ int checkSorted(int arr[], int size)
         descendente = 0;
       }
     }
-  
-  if (ascendente = 0)
+  if(ascendente = 1)
   {
     return 1;
   } 
-  else if (descendente = 0)
+  else if(descendente = 1)
   {
     return -1;
   } 

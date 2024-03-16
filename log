@@ -432,3 +432,17 @@ exercises.c:135:12: error: suggest parentheses around assignment used as truth v
 cc1: all warnings being treated as errors
 Compilation failed
 9d969e5
+Sat 16 Mar 2024 09:24:34 PM UTC: 
+ exercises.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:130:6: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  130 |   if(ascendente = 1)
+      |      ^~~~~~~~~~
+exercises.c:134:11: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  134 |   else if(descendente = 1)
+      |           ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8f37b58
