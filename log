@@ -560,3 +560,24 @@ exercises.c:214:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 506f7c9
+Sat 16 Mar 2024 10:11:45 PM UTC: 
+ exercises.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:195:47: error: ‘nodo’ undeclared (first use in this function)
+  195 |       Nodo *nuevoNodo = (Nodo *)malloc(sizeof(nodo))
+      |                                               ^~~~
+exercises.c:195:47: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:197:7: error: expected ‘,’ or ‘;’ before ‘nuevoNodo’
+  197 |       nuevoNodo -> numero = arr[i];
+      |       ^~~~~~~~~
+exercises.c:210:10: error: incompatible types when returning type ‘Nodo’ {aka ‘struct nodo’} but ‘Nodo *’ {aka ‘struct nodo *’} was expected
+  210 |   return *cabeza;
+      |          ^~~~~~~
+exercises.c:211:1: error: control reaches end of non-void function [-Werror=return-type]
+  211 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+36fe552
