@@ -418,3 +418,17 @@ exercises.c:118:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 d722b43
+Sat 16 Mar 2024 09:21:16 PM UTC: 
+ exercises.c | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:131:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  131 |   if (ascendente = 0)
+      |       ^~~~~~~~~~
+exercises.c:135:12: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  135 |   else if (descendente = 0)
+      |            ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9d969e5

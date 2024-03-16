@@ -112,9 +112,31 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size)
 {
- 
-  
+  int ascendente = 1;
+  int descendente = 1;
 
+  for(size_t i = 0; i < size - 1; i++)
+    {
+      if (arr[i] > arr[i + 1])
+      {
+        ascendente = 0;
+      }
+      
+      if (arr[i] < arr[i + 1]) 
+      {
+        descendente = 0;
+      }
+    }
+  
+  if (ascendente = 0)
+  {
+    return 1;
+  } 
+  else if (descendente = 0)
+  {
+    return -1;
+  } 
+  return 0;
 }
 
 /*
@@ -145,6 +167,7 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
   strcpy(libro -> autor.nombre, nombreAutor);
   libro -> autor.anioNacimiento = anioNacimiento;
   libro -> anioPublicacion = anioPublicacion;
+  
 }
 
 /*
