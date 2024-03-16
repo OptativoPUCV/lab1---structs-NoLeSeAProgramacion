@@ -458,3 +458,24 @@ Sat 16 Mar 2024 09:30:36 PM UTC:
  tests:  0|1
 total_score: 60/70
 4e937cf
+Sat 16 Mar 2024 09:53:15 PM UTC: 
+ exercises.c | 28 +++++++++++++++++++++-------
+ 1 file changed, 21 insertions(+), 7 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:195:47: error: ‘nodo’ undeclared (first use in this function)
+  195 |       Nodo *nuevoNodo = (Nodo *)malloc(sizeof(nodo))
+      |                                               ^~~~
+exercises.c:195:47: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:196:7: error: expected ‘,’ or ‘;’ before ‘{’ token
+  196 |       {
+      |       ^
+exercises.c:195:13: error: unused variable ‘nuevoNodo’ [-Werror=unused-variable]
+  195 |       Nodo *nuevoNodo = (Nodo *)malloc(sizeof(nodo))
+      |             ^~~~~~~~~
+exercises.c:192:9: error: unused variable ‘ultimo’ [-Werror=unused-variable]
+  192 |   Nodo *ultimo = NULL;
+      |         ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cb36d2c
